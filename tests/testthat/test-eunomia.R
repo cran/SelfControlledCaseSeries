@@ -97,7 +97,11 @@ if (!isFALSE(tryCatch(find.package("Eunomia"), error = function(e) FALSE))) {
       seasonalityCovariateSettings = seasonalitySettings
     )
 
-    fitSccsModelArgs <- createFitSccsModelArgs()
+    # Use grid with gradients likelihood approximation:
+    fitSccsModelArgs <- createFitSccsModelArgs(
+      profileGrid = seq(log(0.1), log(10), length.out = 8),
+      profileBounds = NULL
+    )
 
     sccsAnalysis1 <- createSccsAnalysis(
       analysisId = 1,
@@ -199,6 +203,11 @@ if (!isFALSE(tryCatch(find.package("Eunomia"), error = function(e) FALSE))) {
                           unique(exposure$exposures_outcome_set_id)),
                   0)
 
+    # Verify likelihood profiles have gradients:
+    likelihoodProfile <- readr::read_csv(file.path(outputFolder, "export", "sccs_likelihood_profile.csv"), show_col_types = FALSE)
+    expect_true(any(!is.na(likelihoodProfile$gradient)))
+
+    # Verify exported CSV files match model specifications:
     specs <- readr::read_csv(
       file = system.file("csv", "resultsDataModelSpecification.csv", package = "SelfControlledCaseSeries"),
       show_col_types = FALSE

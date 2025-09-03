@@ -29,4 +29,12 @@ Create a parameter object for the function fitSccsModel
 }
 \details{
 Create an object defining the parameter values.
+
+Likelihood profiling is only done for variables for which \code{profileLikelihood} is set to \code{TRUE} when
+calling \code{\link[=createEraCovariateSettings]{createEraCovariateSettings()}}. Either specify the \code{profileGrid} for a completely user-
+defined grid, or \code{profileBounds} for an adaptive grid. Both should be defined on the log IRR scale.
+When both \code{profileGrid} and \code{profileGrid} are \code{NULL} likelihood profiling is disabled.
+
+To make use of the more efficient Hermite interpolation in evidence synthesis, set
+\code{profileGrid = seq(log(0.1), log(10), length.out = 8)} and \code{profileBounds = NULL}.
 }
