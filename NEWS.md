@@ -1,3 +1,11 @@
+SelfControlledCaseSeries 6.1.1
+==============================
+
+Bugfixes
+
+1. Fixed time trend diagnostic edge cases causing errors.
+
+
 SelfControlledCaseSeries 6.1.0
 ==============================
 

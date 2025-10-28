@@ -1,8 +1,8 @@
 Package: SelfControlledCaseSeries
 Type: Package
 Title: Self-Controlled Case Series
-Version: 6.1.0
-Date: 2025-09-03
+Version: 6.1.1
+Date: 2025-10-24
 Authors@R: c(
   person("Martijn", "Schuemie", , "schuemie@ohdsi.org", role = c("aut", "cre")),
 	person("Patrick", "Ryan", role = c("aut")),
@@ -31,12 +31,12 @@ Suggests: zip, testthat, knitr, rmarkdown, Eunomia, withr
 License: Apache License 2.0
 LinkingTo: Rcpp
 NeedsCompilation: yes
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8
-Packaged: 2025-09-03 06:13:22 UTC; schuemie
+Packaged: 2025-10-28 05:34:18 UTC; schuemie
 Author: Martijn Schuemie [aut, cre],
   Patrick Ryan [aut],
   Trevor Shaddox [aut],
   Marc Suchard [aut]
 Repository: CRAN
-Date/Publication: 2025-09-03 07:00:02 UTC
+Date/Publication: 2025-10-28 06:20:08 UTC
