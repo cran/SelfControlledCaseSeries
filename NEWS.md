@@ -1,3 +1,28 @@
+SelfControlledCaseSeries 6.1.4
+==============================
+
+Bugfixes
+
+1. Fixed bug when restricting time to era ID, and there are multiple exposure-outcome pairs.
+
+
+SelfControlledCaseSeries 6.1.3
+==============================
+
+Bugfixes
+
+1. Replaced `Rf_error`with `Rcpp::stop`.
+2. Dropped `MakeVars` files.
+
+
+SelfControlledCaseSeries 6.1.2
+==============================
+
+Bugfixes
+
+1. Fixed bug that would cause unnecessary compute if multiple analyses used the same study population settings.
+
+
 SelfControlledCaseSeries 6.1.1
 ==============================
 
